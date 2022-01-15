@@ -5,9 +5,18 @@ import ExpenseForm from './ExpenseForm';
 import './style.css';
 
 const NewExpense = (props) => {
+    const saveExpenseHandler = (data) => {
+        const expenseData = {
+            ...data,
+            id: Math.random().toPrecision()
+        }
+
+        props.onAddExpense(expenseData);
+    }
+
     return (
         <div className="new-expense">
-            <ExpenseForm />
+            <ExpenseForm onSaveData={saveExpenseHandler} />
         </div>
     );
 }

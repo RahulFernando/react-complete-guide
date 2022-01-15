@@ -14,6 +14,7 @@ const ExpenseForm = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    props.onSaveData(values);
     setValues(obj);
   };
 
