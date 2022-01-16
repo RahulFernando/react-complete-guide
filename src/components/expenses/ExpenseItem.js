@@ -11,7 +11,6 @@ const ExpenseItem = (props) => {
         <h2>{title}</h2>
         <div className="expense-item__price">${props.expense_amount}</div>
       </div>
-      <button onClick={() => setTitle('Updated!!!')}>Change Title</button>
     </div>
   );
 }

@@ -14,7 +14,13 @@ const ExpenseForm = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onSaveData(values);
+
+    const expenseData = {
+      expense_title: values.title,
+      expense_amount: values.amount,
+      expense_date: new Date(values.date)
+    };
+    props.onSaveData(expenseData);
     setValues(obj);
   };
 
