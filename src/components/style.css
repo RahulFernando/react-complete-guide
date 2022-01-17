@@ -102,6 +102,16 @@
   border-radius: 6px;
 }
 
+.expenses-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expenses-list__fallback {
+  color: white;
+  text-align: center;
+}
+
 @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;
